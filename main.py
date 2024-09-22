@@ -49,11 +49,11 @@ def convert_to_webp_from_folder(folder_path:str):
     image_formats = ['*.png', '*.jpg', '*.jpeg', '*.gif', '*.bmp']
     # 遍历 img/*.png,  img/*.jpg等
     for fmt in image_formats:
-        img_paths.extend(glob.glob(f"{folder_path}/{fmt}"))
+        img_paths.extend(glob.glob(f"{folder_path}/**/{fmt}",recursive=True))
     # print(img_paths)
 
     for imgpath in img_paths:
         压缩模式 = convert_to_webp(imgpath)
         print(imgpath,压缩模式)
 
-convert_to_webp_from_folder(r'C:\jiangkermans\blogHexoSource\source\_posts\用廉价的方案来加速博客访问——简单的nginx转发')
+convert_to_webp_from_folder(r'C:\jiangkermans\blogHexoSource\source\_posts\我好像已经在galgame上花费了很多时间，但是我不会改')

@@ -1,10 +1,13 @@
-# 定义文件名列表
-filenames = ['a.png', 'b.c.png', 'example.archive.zip']
+import glob
 
-# 遍历文件名列表，提取最后一个点之前的所有内容
-for filename in filenames:
-    # 使用rsplit()方法从右侧开始分割，并指定最大分割次数为1
-    name_without_extension = filename.rsplit('.', 1)[0]
-    print(name_without_extension)
+folder_path=r"C:\jiangkermans\blogHexoSource\source\_posts\我好像已经在galgame上花费了很多时间，但是我不会改"
+# img_paths = []
+# # 定义图片格式列表（不包括webp）
+# image_formats = ['*.png', '*.jpg', '*.jpeg', '*.gif', '*.bmp']
+# # 遍历 img/*.png,  img/*.jpg等  ,  同时还要遍历子文件夹下的图片
+# for fmt in image_formats:
+#     img_paths.extend(glob.glob(f"{folder_path}/{fmt}",recursive=True))
+# print(img_paths)
 
-print("a.b.c.d".rsplit(".",1))
+a= glob.glob(f"{folder_path}/**/*.jpg",recursive=True)
+1
